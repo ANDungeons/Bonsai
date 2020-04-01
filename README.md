@@ -1,25 +1,5 @@
 # Bonsai
 
-__Koch ideas__
-* Be able to standardize plots easily
-  * Set colorscheme
-  * Line/point style
-  * Add error bars
-  * Resize
-  * Set axis values
-  * Double y-axes
-  * Highlight certain data points or lines
-* Manipulate data
-  * Be able to import new data and handle it accordingly
-  * Change which data is being used (i.e., plot X vs Y, or X vs Z)
-  * Tell which data goes to which axis
-    * Multi-axis plots
-    * Error bars
-  * Filter data
-    * Have move stringent filters (i.e., if max in some set, only use that set)
-  * Envelope over data (this is kind of getting into postprocessing than solely plotting)
-
-__Hoagland Thoughts__
 * Data Stuctures
   * Primary data in a large multi-dimensional DataFrame
     * Multiple columns of "independent" descriptive data
@@ -36,9 +16,21 @@ __Hoagland Thoughts__
   * Add new sets of data, including inserting new columns as needed
   * Envelope data
     * Select maximum or minimum data in certain sets
+    
 * Visualization
-  * Standard visualizations: scatter or line plots of two-dimensional data
-  * Colors: Have a default set of colormaps, but with full overwrite capability
-    * Defaults dependent on the "independent" data the columns are
-  * In general heavily rely on optional arguments with defaults
-  * Have a standard Jupyter Notebook for pulling in a large DataFrame and then visualizing portions of it
+  * Support use of matplotlib plots/figs kwargs (In general heavily rely on optional arguments with defaults)
+    * Set colorscheme
+    * Line/point style
+    * Add error bars
+    * Resize
+    * Set axis values
+    * Double y-axes
+    * Multi-axis plots
+    * Error bars
+  * Highlight/filter certain data points
+    * Based on non-plotted variables
+    * Based on arbirarty functions (max, min, envel, etc.)
+  * Standard visualizations:
+    * Have a standard Jupyter Notebook for pulling in a large DataFrame and then visualizing portions of it
+    * Standard letter quality plots of two-dimensional data
+  * API Interface for custom plotting for individual needs
